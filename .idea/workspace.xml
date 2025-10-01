@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD.">
+    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Correção script de construção do plano">
+      <change afterPath="$PROJECT_DIR$/ground_generator_copia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ground_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/resultados_h1.0_s30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/resultados_h1.0_s30.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +59,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
     </key>
@@ -77,7 +83,7 @@
       <updated>1759327771751</updated>
       <workItem from="1759327772797" duration="51000" />
       <workItem from="1759328435351" duration="177000" />
-      <workItem from="1759340869289" duration="7355000" />
+      <workItem from="1759340869289" duration="9267000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <option name="closed" value="true" />
@@ -111,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759348748010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Correção script de construção do plano">
+      <option name="closed" value="true" />
+      <created>1759348825618</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759348825618</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,10 +134,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First files" />
     <MESSAGE value="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD." />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD." />
+    <MESSAGE value="Correção script de construção do plano" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção script de construção do plano" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759348762121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759348835435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

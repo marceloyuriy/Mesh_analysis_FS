@@ -3,15 +3,15 @@
 import os
 import subprocess
 import textwrap
-from ground_generator import create_p3d_half_plane_ysymmetry
+from version_02.ground_generator import create_p3d_half_plane_ysymmetry
 
 # --- CONFIGURAÇÕES DA SIMULAÇÃO ---
 
 flightstream_exe = r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86_64.exe"
 veiculo_geometria = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/geometria/AR021D_OGE.fsm"
 gerador_solo_script = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/ground_generator.py"
-config_output_dir = r'C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\FS_config'
-output_dir = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/output"
+config_output_dir = r'/FS_config'
+output_dir = r"/output"
 
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(config_output_dir, exist_ok=True)
