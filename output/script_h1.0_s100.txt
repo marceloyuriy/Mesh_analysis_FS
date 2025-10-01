@@ -1,0 +1,53 @@
+
+# Script de Análise de Efeito Solo para FlightStream
+# Configuração: Altura=1.0m, Tamanho do Solo=100m
+
+# Abre o arquivo .fsm base que já contém o veículo
+OPEN
+C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\geometria\AR021D_OGE.fsm
+
+# Importa a malha do plano do solo gerada
+IMPORT
+UNITS METER
+FILE_TYPE STL
+FILE C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\output\plano_solo_100m.stl
+
+# Translada CADA COMPONENTE do VEÍCULO para a altura de voo desejada (eixo Z)
+TRANSLATE_SURFACE_IN_FRAME 80 1 0.0 0.0 1.0 METER ENABLE
+TRANSLATE_SURFACE_IN_FRAME 81 1 0.0 0.0 1.0 METER ENABLE
+TRANSLATE_SURFACE_IN_FRAME 82 1 0.0 0.0 1.0 METER ENABLE
+TRANSLATE_SURFACE_IN_FRAME 83 1 0.0 0.0 1.0 METER ENABLE
+TRANSLATE_SURFACE_IN_FRAME 84 1 0.0 0.0 1.0 METER ENABLE
+TRANSLATE_SURFACE_IN_FRAME 85 1 0.0 0.0 1.0 METER ENABLE
+TRANSLATE_SURFACE_IN_FRAME 86 1 0.0 0.0 1.0 METER ENABLE
+
+
+# --- CONFIGURAÇÕES DA FÍSICA E SOLVER ---
+
+# Exclui o plano do solo (ID 137) dos cálculos de camada limite viscosa.
+SET_VISCOUS_EXCLUDED_BOUNDARIES 1
+137
+
+# Define os parâmetros de simulação
+
+SOLVER_SET_AOA 0.0
+SOLVER_SET_VELOCITY 25.0 # m/s
+SOLVER_SET_ITERATIONS 1000
+SOLVER_SET_CONVERGENCE 1E-5
+
+# Inicializa o solver com TODAS as superfícies
+INITIALIZE_SOLVER
+SOLVER_MODEL SUBSONIC_PRANDTL_GLAUERT
+SURFACES -1
+
+# Inicia a execução do solver
+START_SOLVER
+
+# --- EXPORTAÇÃO DE RESULTADOS ---
+
+# Exporta a planilha de análise
+EXPORT_SOLVER_ANALYSIS_SPREADSHEET
+C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\output\resultados_h1.0_s100.txt
+
+# Fecha o FlightStream
+CLOSE_FLIGHTSTREAM
