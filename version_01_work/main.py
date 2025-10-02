@@ -10,7 +10,7 @@ from version_02.ground_generator import create_p3d_half_plane_ysymmetry
 flightstream_exe = r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86_64.exe"
 veiculo_geometria = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/geometria/AR021D_OGE.fsm"
 gerador_solo_script = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/ground_generator.py"
-config_output_dir = r'/FS_config'
+config_output_dir = r'/FS_script'
 output_dir = r"/output"
 
 os.makedirs(output_dir, exist_ok=True)

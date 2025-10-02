@@ -7,12 +7,15 @@ from ground_generator import create_p3d_half_plane_ysymmetry
 
 # --- CONFIGURAÇÕES DA SIMULAÇÃO ---
 
-flightstream_exe = r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86_64.exe"
-veiculo_geometria = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/geometria/AR021D_OGE.fsm"
-gerador_solo_script = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/ground_generator.py"
-config_output_dir = r'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/FS_config'
-output_dir = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/output"
-ground_mesh = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/ground_mesh"
+def bslash(path: str) -> str:
+    return path.replace('/', '\\')
+
+flightstream_exe = bslash(r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86_64.exe")
+veiculo_geometria = bslash(r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/geometria/AR021D_OGE.fsm")
+gerador_solo_script = bslash(r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/ground_generator.py")
+config_output_dir = bslash(r'/version_03/FS_script')
+output_dir = bslash(r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/output")
+ground_mesh = bslash(r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/ground_mesh")
 
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(config_output_dir, exist_ok=True)
@@ -20,13 +23,16 @@ os.makedirs(ground_mesh, exist_ok=True)
 
 # --- PARÂMETROS PARA A VARREDURA ---
 altura = 2.8125
-tamanhos_solo = [30]
-mesh_base = [21, 11]
-mesh_configs = {'21_elem': [2 * mesh_base[0], mesh_base[0]], '11_elem': [2 * mesh_base[1], mesh_base[1]]}
+tamanhos_solo = [30, 50, 70]
+mesh_base = [[11, 21], [21, 41], [31, 61]]
+mesh_configs = {'11_elem': [2 * mesh_base[0][0], mesh_base[0][1]], '21_elem': [2 * mesh_base[1][0], mesh_base[1][1]],
+                '31_elem': [2 * mesh_base[2][0], mesh_base[2][1]]}
 
 # --- IDs DAS SUPERFÍCIES NO FLIGHTSTREAM ---
 IDS_SUPERFICIES_VEICULO = [80, 81, 82, 83, 84, 85, 86]
 ID_SUPERFICIE_SOLO = 137
+
+print(mesh_configs.items())
 
 # --- LOOP DE EXECUÇÃO ---
 for nome_mesh, mesh_dims in mesh_configs.items():
@@ -36,17 +42,17 @@ for nome_mesh, mesh_dims in mesh_configs.items():
 
         # 1. Gerar o arquivo de malha para o plano do solo
         nome_arquivo_solo = f"plano_solo_{tamanho}m.p3d"
-        caminho_arquivo_solo = f'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/ground_mesh/{nome_arquivo_solo}'
+        caminho_arquivo_solo = bslash(f'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/ground_mesh/{nome_arquivo_solo}')
 
         print(f"Gerando malha do solo: {nome_arquivo_solo}")
         create_p3d_half_plane_ysymmetry(caminho_arquivo_solo,-altura,tamanho, tamanho * 2, nj, ni)
 
         # 2. Gerar o script do FlightStream para esta configuração
         nome_script_fs = f"script_h{altura}_s{tamanho}.txt"
-        caminho_script_fs = f'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/FS_config/{nome_script_fs}'
+        caminho_script_fs = bslash(f'/version_03/FS_script/{nome_script_fs}')
 
         nome_arquivo_resultados = f"resultados_h{altura}_s{tamanho}.txt"
-        caminho_arquivo_resultados = f'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/output/{nome_arquivo_resultados}'
+        caminho_arquivo_resultados = bslash(f'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03/output/{nome_arquivo_resultados}')
 
         # Formata os IDs do veículo para o script - > tem como objetivo limitar a analise para apenas as superficies do veiculo
         num_boundaries_veiculo = len(IDS_SUPERFICIES_VEICULO)
@@ -56,12 +62,11 @@ for nome_mesh, mesh_dims in mesh_configs.items():
         script_content_raw = f"""
         OPEN
         {veiculo_geometria}
+        SET_SIMULATION_LENGTH_UNITS METER
+        
         IMPORT
-        UNITS METER
-        FILE_TYPE P3D
         FILE {caminho_arquivo_solo}
         
-        CLEAR
         SET_VISCOUS_EXCLUDED_BOUNDARIES 1
         {ID_SUPERFICIE_SOLO}
         
@@ -92,7 +97,6 @@ for nome_mesh, mesh_dims in mesh_configs.items():
             f.write(script_content_final)
 
         print(f"Script FlightStream gerado: {nome_script_fs}")
-
         # 3. Executar o FlightStream com o script gerado
         print("Iniciando FlightStream em modo batch...")
         subprocess.run([

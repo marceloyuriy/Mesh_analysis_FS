@@ -14,7 +14,7 @@ flightstream_exe = r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86
 veiculo_geometria = os.path.join(project_base_path, 'geometria', 'AR021D_OGE.fsm')
 geo_dir = os.path.join(project_base_path, 'geometria')
 output_dir = os.path.join(project_base_path, 'output')
-config_output_dir = os.path.join(project_base_path, 'FS_config')
+config_output_dir = os.path.join(project_base_path, 'FS_script')
 
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(config_output_dir, exist_ok=True)
