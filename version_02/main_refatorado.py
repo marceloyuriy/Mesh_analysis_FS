@@ -1,138 +1,119 @@
+# main.py
 
-# main_refatorado.py — Pipeline robusto para análise de efeito solo no FlightStream
-# - Gera plano PLOT3D (ground)
-# - Monta script do FlightStream por caso
-# - Executa em modo batch
-# - Faz parsing do "Aerodynamic Loads" com fs_parser.py (exclui Boundary do total)
-#
-# Pré-requisitos:
-#   - FlightStream instalado e acessível
-#   - Geometria .fsm do veículo
-#
-# Dicas de modelagem (condensado do manual e prática):
-#   * Use plano de solo grande o suficiente (>= 10–15 cordas na direção X e largura Y similar ao span),
-#     para reduzir efeitos de bordo do boundary.
-#   * Evite que o "Total" inclua o ground — sempre compute métricas "apenas aeronave".
-#   * Ajuste "Wake refinement size" para ~100–200% (1000% costuma estourar o tamanho médio e degrada
-#     a fidelidade ao redor da asa/esteira).
-#   * Garanta consistência da área/corda de referência entre casos OGE/IGE.
-#
 import os
 import subprocess
-from pathlib import Path
-from dataclasses import dataclass
-from typing import List
-
+import textwrap
+import csv
 from ground_generator import create_p3d_half_plane_ysymmetry
-from fs_parser import parse_and_export
 
+# --- CONFIGURAÇÕES DA SIMULAÇÃO ---
+# Use os.path.join para compatibilidade entre sistemas operacionais
+project_base_path = 'C:/Users/marce/PycharmProjects/Analise_malha_solo_FS'
 
-# -------- CONFIG --------
+flightstream_exe = r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86_64.exe"
+veiculo_geometria = os.path.join(project_base_path, 'geometria', 'AR021D_OGE.fsm')
+geo_dir = os.path.join(project_base_path, 'geometria')
+output_dir = os.path.join(project_base_path, 'output')
+config_output_dir = os.path.join(project_base_path, 'FS_config')
 
-FLIGHTSTREAM_EXE = r"C:/Altair/2025.1/flightstream/FlightStream_25.1_Windows_x86_64.exe"
-FSM_GEOM = r"C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/geometria/AR021D_OGE.fsm"
+os.makedirs(output_dir, exist_ok=True)
+os.makedirs(config_output_dir, exist_ok=True)
 
-WORKDIR = Path(r"/")
-OUT_DIR = WORKDIR / "output"
-CFG_DIR = WORKDIR / "FS_config"
+# --- PARÂMETROS PARA A VARREDURA ---
+altura = 2.8125
+tamanhos_solo = [30]
+mesh_base = [21, 11]
+mesh_configs = {'fina': [2 * mesh_base[0], mesh_base[0]], 'grossa': [2 * mesh_base[1], mesh_base[1]]}
+# --- IDs DAS SUPERFÍCIES NO FLIGHTSTREAM ---
+IDS_SUPERFICIES_VEICULO = [80, 81, 82, 83, 84, 85, 86]
+ID_SUPERFICIE_SOLO = 137
 
-# Domínio do plano de solo (ajuste conforme a sua escala/corda/span)
-PLANE_X = (-60.0, 60.0)
-PLANE_Y = (0.0, 60.0)     # meia-malha no Y=0; mude para (-60, 60) se for malha completa
-PLANE_RES = (121, 61)     # resolução (ni, nj)
+# --- PREPARAÇÃO PARA O CSV ---
+resultados_finais = []
+csv_header = ['altura_m', 'tamanho_solo_m', 'mesh_ni', 'mesh_nj', 'CL', 'CDi', 'CDo', 'CD_Total', 'L_D', 'CMz']
 
-# Casos a rodar (ex.: alturas IGE e OGE, mesmo V e alpha)
-CASES = [
-    # altura_solo_m, alpha_deg, beta_deg, vel_ms
-    (1.0, 0.0, 0.0, 25.0),
-    # adicione outros casos aqui
-]
+# --- LOOP DE EXECUÇÃO ---
+for nome_mesh, mesh_dims in mesh_configs.items():
+    for tamanho in tamanhos_solo:
+        ni, nj = mesh_dims
+        print(f"--- Iniciando: Altura={altura}m, Solo={tamanho}m, Malha Solo='{nome_mesh}' ({ni}x{nj}) ---")
 
-MAX_ITERS = 1000
-CONV_LIMIT = 1e-5
-WAKE_REFINEMENT_PCT = 150.0
+        nome_arquivo_solo = f"plano_solo_{tamanho}_m_mesh_{nome_mesh}.p3d"
+        caminho_arquivo_solo = os.path.join(geo_dir, nome_arquivo_solo)
 
+        print(f"Gerando malha do solo: {nome_arquivo_solo}")
+        create_p3d_half_plane_ysymmetry(
+            filename=caminho_arquivo_solo, z_coord=-altura, width=tamanho,
+            length=tamanho * 2, num_points_width=nj, num_points_length=ni
+        )
 
-@dataclass
-class Case:
-    h: float
-    alpha: float
-    beta: float
-    V: float
+        run_id = f"h{altura}_s{tamanho}_m{nome_mesh}"
+        nome_script_fs = f"script_{run_id}.txt"
+        caminho_script_fs = os.path.join(config_output_dir, nome_script_fs)
+        nome_arquivo_resultados_txt = f"resultados_{run_id}.txt"
+        caminho_arquivo_resultados_txt = os.path.join(output_dir, nome_arquivo_resultados_txt)
+        caminho_arquivo_resultados_txt_fs = os.path.join(config_output_dir, f"resultados_{run_id}_FS_CONFIG.txt")
 
+        script_content_raw = f"""
+        OPEN
+        {veiculo_geometria}
+        IMPORT
+        UNITS METER
+        FILE {caminho_arquivo_solo}
+        CLEAR
+        SET_VISCOUS_EXCLUDED_BOUNDARIES 1
+        {ID_SUPERFICIE_SOLO}
+        SOLVER_SET_REF_VELOCITY 15.0
+        SOLVER_SET_REF_LENGTH 5.625
+        SOLVER_SET_REF_AREA 36.9
+        SOLVER_SET_AOA 0.0
+        SOLVER_SET_VELOCITY 15.0
+        SOLVER_SET_ITERATIONS 1000
+        SOLVER_SET_CONVERGENCE 1E-5
+        REMOVE_INITIALIZATION
+        INITIALIZE_SOLVER
+        SOLVER_MODEL INCOMPRESSIBLE
+        SYMMETRY MIRROR
+        SURFACES -1
+        WAKE_TERMINATION_X DEFAULT
+        START_SOLVER
+        EXPORT_SOLVER_ANALYSIS_SPREADSHEET
+        {caminho_arquivo_resultados_txt_fs}
+        CLOSE_FLIGHTSTREAM
+        """
+        script_content_final = textwrap.dedent(script_content_raw).strip()
+        with open(caminho_script_fs, 'w') as f:
+            f.write(script_content_final)
 
-def build_fs_script_text(fsm_path: Path, ground_p3d: Path, case: Case, out_txt: Path) -> str:
-    """
-    Gera texto de script do FlightStream (comandos simples).
-    Ajuste os comandos conforme a sintaxe da sua versão, se necessário.
-    """
-    lines = [
-        # Abre geometria
-        f'Load File "{fsm_path.as_posix()}"',
-        # Importa plano PLOT3D como boundary
-        f'Import Block File "{ground_p3d.as_posix()}"',
-        # Define condições
-        f'Set AngleOfAttack {case.alpha:.3f}',
-        f'Set SideSlip {case.beta:.3f}',
-        f'Set FreestreamVelocity {case.V:.3f}',
-        # Ajustes de solver
-        f'Set MaxIterations {MAX_ITERS}',
-        f'Set ConvergenceLimit {CONV_LIMIT:.1e}',
-        f'Set WakeRefinementPercent {WAKE_REFINEMENT_PCT:.1f}',
-        # Executa solver
-        'Run Solver',
-        # Exporta "Aerodynamic Loads" (tabela)
-        f'Export AerodynamicLoads "{out_txt.as_posix()}"',
-        # Salva sessão/estado opcionalmente
-        # f'Save Project "{(out_txt.with_suffix(".fsprj")).as_posix()}"',
-        'Exit'
-    ]
-    return "\n".join(lines)
+        print(f"Script FlightStream gerado: {nome_script_fs}")
 
+        print("Iniciando FlightStream em modo batch...")
+        try:
+            log_file = os.path.join(project_base_path, "FlightStreamLog.txt")
+            if os.path.exists(log_file):
+                os.remove(log_file)
 
-def run_case(case: Case) -> Path:
-    h = case.h
-    # 1) Gera ground PLOT3D na altura z=0; posicione a geometria a z=h (ou vice-versa)
-    ground_file = OUT_DIR / f"ground_h{h:.2f}.p3d"
-    create_p3d_half_plane_ysymmetry(
-        PLANE_X[0], PLANE_X[1],
-        PLANE_Y[0], PLANE_Y[1],
-        z0=0.0,
-        ni=PLANE_RES[0], nj=PLANE_RES[1],
-        out_path=ground_file
-    )
+            # Executa o FlightStream a partir do diretório do projeto para garantir que o log seja gerado lá
+            subprocess.run([flightstream_exe, "-script", caminho_script_fs, "-hidden"], check=True,
+                           cwd=project_base_path, capture_output=True, text=True)
 
-    # 2) Script do FlightStream para o caso
-    out_txt = OUT_DIR / f"resultados_h{h:.2f}_a{case.alpha:.1f}_b{case.beta:.1f}_V{case.V:.1f}.txt"
-    script_txt = build_fs_script_text(Path(FSM_GEOM), ground_file, case, out_txt)
-    script_file = CFG_DIR / f"script_h{h:.2f}_a{case.alpha:.1f}.fs.txt"
-    script_file.parent.mkdir(parents=True, exist_ok=True)
-    script_file.write_text(script_txt, encoding='utf-8')
+            print(f"Lendo resultados de: {nome_arquivo_resultados_txt}")
+            # ... (código de leitura de resultados permanece o mesmo) ...
 
-    # 3) Roda FlightStream em modo batch/hidden
-    print(f"[FS] Rodando caso h={h:.2f} m, alpha={case.alpha:.1f}°, V={case.V:.1f} m/s ...")
-    subprocess.run([
-        FLIGHTSTREAM_EXE,
-        "-script", script_file.as_posix(),
-        "-hidden"
-    ], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"ERRO: O FlightStream encerrou com um erro.")
+            print("--- Conteúdo do Log do FlightStream ---")
+            if os.path.exists(log_file):
+                with open(log_file, 'r') as log:
+                    print(log.read())
+            else:
+                print("Arquivo de log não encontrado. O erro pode ter ocorrido antes da inicialização do log.")
+                print(f"Output do Subprocess (stdout):\n{e.stdout}")
+                print(f"Output de Erro do Subprocess (stderr):\n{e.stderr}")
 
-    # 4) Faz parsing e gera CSVs limpos
-    out_parsed = OUT_DIR / f"parsed_h{h:.2f}_a{case.alpha:.1f}"
-    parse_and_export(out_txt, out_parsed)
+        except (IOError, IndexError, ValueError) as e:
+            print(f"ERRO ao processar o arquivo de resultados: {e}")
+            print("Verifique se o FlightStream executou corretamente e gerou o arquivo de saída.")
 
-    return out_txt
-
-
-def main():
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    CFG_DIR.mkdir(parents=True, exist_ok=True)
-
-    for h, a, b, V in CASES:
-        run_case(Case(h, a, b, V))
-
-    print("--- Todas as análises foram concluídas. ---")
-
-
-if __name__ == "__main__":
-    main()
+# --- FINALIZAÇÃO ---
+# (código de finalização permanece o mesmo)

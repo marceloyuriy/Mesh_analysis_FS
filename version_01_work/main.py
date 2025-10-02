@@ -17,7 +17,7 @@ os.makedirs(output_dir, exist_ok=True)
 os.makedirs(config_output_dir, exist_ok=True)
 
 # --- PARÂMETROS PARA A VARREDURA ---
-alturas_teste = [1.0, 2.0, 3.0]
+alturas_teste = [2.8125]
 tamanhos_solo = [30]
 mesh = [[21,41],[11,22]]
 # --- IDs DAS SUPERFÍCIES NO FLIGHTSTREAM ---

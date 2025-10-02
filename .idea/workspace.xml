@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Correção script de construção do plano">
-      <change afterPath="$PROJECT_DIR$/ground_generator_copia.py" afterDir="false" />
+    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Refatoração da versão 1. Adição da versão 02">
+      <change afterPath="$PROJECT_DIR$/version_03/ground_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version_03/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ground_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/resultados_h1.0_s30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/resultados_h1.0_s30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometria/AR021D_OGE.fsm" beforeDir="false" afterPath="$PROJECT_DIR$/geometria/AR021D_OGE.fsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_01_work/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_01_work/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/fs_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_02/fs_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_02/ground_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/main_refatorado.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_02/main_refatorado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,18 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "marceloyuriy"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;marceloyuriy&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/marceloyuriy/Mesh_analysis_FS.git",
-    "accountId": "1b79fc62-32b1-49e0-b554-295c0472089f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/marceloyuriy/Mesh_analysis_FS.git&quot;,
+    &quot;accountId&quot;: &quot;1b79fc62-32b1-49e0-b554-295c0472089f&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -43,12 +47,13 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.criar_plano.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.main_refatorado.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/marce/PycharmProjects/Analise_malha_solo_FS",
+    "last_opened_file_path": "C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/version_03",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,9 +65,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
+      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_02" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
     </key>
   </component>
@@ -83,7 +91,8 @@
       <updated>1759327771751</updated>
       <workItem from="1759327772797" duration="51000" />
       <workItem from="1759328435351" duration="177000" />
-      <workItem from="1759340869289" duration="9267000" />
+      <workItem from="1759340869289" duration="12756000" />
+      <workItem from="1759408816158" duration="8667000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <option name="closed" value="true" />
@@ -125,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759348825618</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refatoração da versão 1. Adição da versão 02">
+      <option name="closed" value="true" />
+      <created>1759351018198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759351018198</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,10 +152,12 @@
     <MESSAGE value="First files" />
     <MESSAGE value="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD." />
     <MESSAGE value="Correção script de construção do plano" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção script de construção do plano" />
+    <MESSAGE value="Refatoração da versão 1. Adição da versão 02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoração da versão 1. Adição da versão 02" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759348835435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main_refatorado.coverage" NAME="main_refatorado Coverage Results" MODIFIED="1759416209575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_02" />
   </component>
 </project>

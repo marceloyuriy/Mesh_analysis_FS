@@ -1,72 +1,69 @@
+# ground_generator.py (VERSÃO AJUSTADA)
 
-"""
-ground_generator.py — Gera um plano em formato PLOT3D ASCII para usar como "ground/boundary" no FlightStream.
-
-Formato gerado (single-zone, ASCII):
-    1
-    ni nj nk
-    X(ni*nj*nk)  Y(ni*nj*nk)  Z(ni*nj*nk)
-
-Obs.:
-- O FlightStream aceita PLOT3D ASCII reticulado. Aqui geramos um plano retangular em z=z0.
-- Para "meia-malha" (simetria Y=0), defina y_min=0 e posicione a aeronave no plano de simetria do FS.
-"""
-
-from __future__ import annotations
-from pathlib import Path
 import numpy as np
 
-
-def create_p3d_half_plane_ysymmetry(
-    x_min: float, x_max: float,
-    y_min: float, y_max: float,
-    z0: float,
-    ni: int, nj: int,
-    out_path: str | Path,
-    ascii_precision: int = 6
-) -> Path:
+def create_p3d_half_plane_ysymmetry(filename, z_coord, width, length, num_points_width, num_points_length):
     """
-    Gera um plano PLOT3D ASCII.
-    - x_min..x_max, y_min..y_max: domínio do plano
-    - z0: cota do plano (altura do solo, ex.: z0=0 e a aeronave a h acima)
-    - ni, nj: resolução do reticulado
-    - out_path: caminho do arquivo .p3d
+    Gera um arquivo .p3d representando um MEIO plano retangular no eixo Y positivo.
+    Ideal para análises de simetria no FlightStream.
 
-    Retorna Path(out_path).
+    Args:
+        filename (str): Nome do arquivo de saída (ex: 'ground_plane.p3d').
+        z_coord (float): Coordenada Z do plano (deve ser 0.0 para efeito solo).
+        width (float): Largura do MEIO plano (extensão no eixo Y a partir de y=0).
+        length (float): Comprimento total do plano (na direção X).
+        num_points_width (int): Número de pontos na largura (j).
+        num_points_length (int): Número de pontos no comprimento (i).
     """
-    out_path = Path(out_path)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+    y_origin_simetria = 0.0
+    
+    # Centraliza o plano no eixo X
+    x_start = -length / 2.0
+    x_end = length / 2.0
 
-    xs = np.linspace(x_min, x_max, ni)
-    ys = np.linspace(y_min, y_max, nj)
-    X, Y = np.meshgrid(xs, ys, indexing='xy')
-    Z = np.full_like(X, float(z0))
+    # O plano começa em y=0 e se estende
+    y_start = y_origin_simetria
+    y_end = y_origin_simetria + width
 
-    # Flatten em ordem Fortran (varia mais rápido em i)
-    Xf = X.reshape(-1, order='F')
-    Yf = Y.reshape(-1, order='F')
-    Zf = Z.reshape(-1, order='F')
+    # Cria as grades de coordenadas
+    x_coords = np.linspace(x_start, x_end, num_points_length)
+    y_coords = np.linspace(y_start, y_end, num_points_width)
+    
+    xx, yy = np.meshgrid(x_coords, y_coords, indexing='ij')
+    zz = np.full(xx.shape, z_coord)
 
-    with out_path.open('w', encoding='utf-8') as f:
-        f.write("1\n")
-        f.write(f"{ni} {nj} 1\n")
+    # Aplana as matrizes na ordem correta para o formato P3D (Fortran 'F')
+    x_flat = xx.flatten(order='F')
+    y_flat = yy.flatten(order='F')
+    z_flat = zz.flatten(order='F')
 
-        # PLOT3D ASCII tipicamente escreve todos X, depois todos Y, depois todos Z
-        fmt = f"{{:.{ascii_precision}e}}"
-        def dump(arr):
-            # escreve 5 valores por linha para legibilidade
-            for i in range(0, arr.size, 5):
-                chunk = arr[i:i+5]
-                f.write(" ".join(fmt.format(v) for v in chunk) + "\n")
+    try:
+        with open(filename, 'w') as f:
+            f.write(" 1\n") # 1 bloco de malha
+            f.write(f" {num_points_length} {num_points_width} 1\n") # Dimensões i, j, k
 
-        dump(Xf)
-        dump(Yf)
-        dump(Zf)
+            # Escreve as coordenadas em blocos X, depois Y, depois Z
+            np.savetxt(f, [x_flat], fmt=' % .8e')
+            np.savetxt(f, [y_flat], fmt=' % .8e')
+            np.savetxt(f, [z_flat], fmt=' % .8e')
 
-    return out_path
+        print(f"Arquivo P3D '{filename}' gerado com sucesso.")
+
+    except Exception as e:
+        print(f"ERRO ao escrever o arquivo P3D: {e}")
 
 
+# --- SEÇÃO DE EXECUÇÃO (PARA TESTE INDIVIDUAL DO SCRIPT) ---
 if __name__ == "__main__":
-    # Exemplo rápido (plano de -30..30 em X, 0..30 em Y, z=0, malha 61x31)
-    p = create_p3d_half_plane_ysymmetry(-2, 30, 0, 30, 0.0, 61, 31, "ground_plane_example.p3d")
-    print("Gerado:", p.resolve())
+    
+    # Parâmetros de exemplo para teste
+    output_filename = "chao_simetria_teste.p3d"
+    
+    create_p3d_half_plane_ysymmetry(
+        filename=output_filename,
+        z_coord=0.0,
+        width=50.0,        # Meia-largura (de y=0 a y=50)
+        length=100.0,      # Comprimento total (de x=-50 a x=50)
+        num_points_width=21,  # nj
+        num_points_length=41  # ni
+    )
