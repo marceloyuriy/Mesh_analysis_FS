@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Refatoração da versão 1. Adição da versão 02">
-      <change afterPath="$PROJECT_DIR$/version_03/ground_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version_03/main.py" afterDir="false" />
+    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geometria/AR021D_OGE.fsm" beforeDir="false" afterPath="$PROJECT_DIR$/geometria/AR021D_OGE.fsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_01_work/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_01_work/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_02/fs_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_02/fs_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_02/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_02/ground_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_02/main_refatorado.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_02/main_refatorado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FS_config/script_h1.00_a0.0.fs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FS_config/script_h2.8125_s30_mfina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FS_config/script_h2.8125_s30_mgrossa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlightStreamLog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometria/Voadeiro.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometria/chao_simetria.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometria/plano_solo_30_m_mesh_fina.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometria/plano_solo_30_m_mesh_grossa.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/analise_consolidada.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/plano_solo_30m_mesh_fina.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/plano_solo_30m_mesh_grossa.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/resultados_h2.8125_s30_mfina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/resultados_h2.8125_s30_mgrossa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_03/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_03/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +72,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_03" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_02" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -92,7 +100,7 @@
       <workItem from="1759327772797" duration="51000" />
       <workItem from="1759328435351" duration="177000" />
       <workItem from="1759340869289" duration="12756000" />
-      <workItem from="1759408816158" duration="8667000" />
+      <workItem from="1759408816158" duration="11460000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <option name="closed" value="true" />
@@ -142,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759351018198</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários">
+      <option name="closed" value="true" />
+      <created>1759425647019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759425647019</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários">
+      <option name="closed" value="true" />
+      <created>1759425659643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759425659643</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,11 +177,12 @@
     <MESSAGE value="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD." />
     <MESSAGE value="Correção script de construção do plano" />
     <MESSAGE value="Refatoração da versão 1. Adição da versão 02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatoração da versão 1. Adição da versão 02" />
+    <MESSAGE value="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759348835435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759427882885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main_refatorado.coverage" NAME="main_refatorado Coverage Results" MODIFIED="1759416209575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_02" />
   </component>
 </project>
