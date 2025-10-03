@@ -1,51 +1,51 @@
+# ground_generator.py (VERSÃO COM CABEÇALHO CORRIGIDO)
+# A única mudança é a remoção da primeira linha que escrevia "1".
+
 import numpy as np
-from typing import Iterable
+import os
 
-def _write_numbers(fp, arr: Iterable[float], per_line: int = 6) -> None:
-    """Escreve valores em notação científica, per_line por linha (estilo Fortran)."""
-    line = []
-    for v in arr:
-        line.append(f"{v:.8E}")
-        if len(line) == per_line:
-            fp.write(" ".join(line) + "\n")
-            line = []
-    if line:
-        fp.write(" ".join(line) + "\n")
 
-def create_p3d_half_plane_ysymmetry(
-    filename: str,
-    z_coord: float,
-    width: float,
-    length: float,
-    num_points_width: int,
-    num_points_length: int,
-) -> None:
+def create_p3d_half_plane_ysymmetry(filename, z_coord, width, length, num_points_width, num_points_length):
     """
-    Gera um arquivo PLOT3D ASCII (1 bloco) para um MEIO PLANO:
-      - eixo x: comprimento (NI = num_points_length)
-      - eixo y: largura (NJ = num_points_width), apenas y >= 0
-      - eixo z: constante = z_coord (NK = 1)
-    Formatação robusta: 6 valores por linha, notação científica.
+    Gera um arquivo .p3d com a formatação final corrigida, incluindo o cabeçalho.
     """
-    # malha retangular centrada em x=0, y∈[0,width], z fixo
-    half_L = length / 2.0
-    x = np.linspace(-half_L, +half_L, num_points_length)
-    y = np.linspace(0.0, width, num_points_width)
-    xx, yy = np.meshgrid(x, y, indexing="ij")
-    zz = np.full_like(xx, fill_value=z_coord, dtype=float)
+    origin = (0, 0, z_coord)
 
-    # PLOT3D convenção: i varia mais rápido → flatten(order="F")
-    x_flat = xx.flatten(order="F")
-    y_flat = yy.flatten(order="F")
-    z_flat = zz.flatten(order="F")
+    print(f"Gerando arquivo '{os.path.basename(filename)}' com formato final...")
 
-    NI, NJ, NK = num_points_length, num_points_width, 1
+    half_length = length / 2.0
+    x_start, x_end = origin[0] - half_length, origin[0] + half_length
+    y_start, y_end = origin[1], origin[1] + width
+    z_plane = origin[2]
 
-    with open(filename, "w") as f:
-        # Cabeçalho PLOT3D multi-bloco (ngrids=1) + dimensões do bloco
-        f.write("1\n")
-        f.write(f"{NI} {NJ} {NK}\n")
-        # Coordenadas: primeiro todos X, depois todos Y, depois todos Z
-        _write_numbers(f, x_flat, per_line=6)
-        _write_numbers(f, y_flat, per_line=6)
-        _write_numbers(f, z_flat, per_line=6)
+    x_coords = np.linspace(x_start, x_end, num_points_length)
+    y_coords = np.linspace(y_start, y_end, num_points_width)
+
+    xx, yy = np.meshgrid(x_coords, y_coords, indexing='ij')
+    zz = np.full(xx.shape, z_plane)
+
+    x_flat = xx.flatten(order='F')
+    y_flat = yy.flatten(order='F')
+    z_flat = zz.flatten(order='F')
+
+    try:
+        with open(filename, 'w') as f:
+            # --- MUDANÇA CRÍTICA ---
+            # Removemos a linha "f.write("1\n")".
+            # A primeira linha do arquivo será diretamente as dimensões da malha.
+            f.write(f"{num_points_length} {num_points_width} 1\n")
+
+            # A lógica de escrever um valor por linha continua, pois é a mais segura.
+            for x_val in x_flat:
+                f.write(f"{x_val:.8f}\n")
+
+            for y_val in y_flat:
+                f.write(f"{y_val:.8f}\n")
+
+            for z_val in z_flat:
+                f.write(f"{z_val:.8f}\n")
+
+        print(f"Arquivo '{os.path.basename(filename)}' criado com sucesso.")
+
+    except Exception as e:
+        print(f"Ocorreu um erro ao escrever o arquivo: {e}")
