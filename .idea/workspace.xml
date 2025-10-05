@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
-      <change afterPath="$PROJECT_DIR$/versao_04/ground_mesh/plano_solo_15m_21x11_h2.8125.p3d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/versao_04/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/run_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_03/ground_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_15m_21x11_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_15m_41x21_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_15m_61x31_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_30m_21x11_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_30m_41x21_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_30m_61x31_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_40m_21x11_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_40m_41x21_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/ground_mesh/plano_solo_40m_61x31_h2.8125.p3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_03/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_03/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/versao_04/ground_mesh/plano_solo_15m_21x11_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/versao_04/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_01_work/ground_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_01_work/ground_generator_copia.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_01_work/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/chao_simetria_teste.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/fs_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/ground_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_02/main_refatorado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_03/ground_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_03/ground_sweep.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_03/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +49,9 @@
     &quot;accountId&quot;: &quot;1b79fc62-32b1-49e0-b554-295c0472089f&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -64,6 +69,7 @@
     "Python.ground_sweep.executor": "Run",
     "Python.main.executor": "Run",
     "Python.main_refatorado.executor": "Run",
+    "Python.run_case.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -96,8 +102,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-PY-252.26199.168" />
-        <option value="bundled-python-sdk-b3d66beaba9a-c6efb3732140-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26199.168" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.26830.99" />
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
       </set>
     </attachedChunks>
   </component>
@@ -112,6 +118,12 @@
       <workItem from="1759328435351" duration="177000" />
       <workItem from="1759340869289" duration="12756000" />
       <workItem from="1759408816158" duration="25256000" />
+      <workItem from="1759496666196" duration="177000" />
+      <workItem from="1759497660972" duration="476000" />
+      <workItem from="1759617640557" duration="146000" />
+      <workItem from="1759617880633" duration="139000" />
+      <workItem from="1759618292711" duration="24000" />
+      <workItem from="1759671701770" duration="4400000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <option name="closed" value="true" />
@@ -193,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759437161241</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
+      <option name="closed" value="true" />
+      <created>1759496736062</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759496736062</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,9 +231,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759442336619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/versao_04" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759678493146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1759438529643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_generator.coverage" NAME="ground_generator Coverage Results" MODIFIED="1759431827402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1759677701118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main_refatorado.coverage" NAME="main_refatorado Coverage Results" MODIFIED="1759416209575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_02" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$corrigir_p3d.coverage" NAME="corrigir_p3d Coverage Results" MODIFIED="1759432927425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
   </component>
