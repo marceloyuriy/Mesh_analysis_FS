@@ -11,6 +11,5 @@ def main():
     for p3d in p3ds:
         run_case(p3d)
 
-
 if __name__ == "__main__":
     main()

@@ -8,9 +8,11 @@ FS_EXE = os.environ.get(
     "FS_EXE",
     r"C:\Altair\2025.1\flightstream\FlightStream_25.1_Windows_x86_64.exe"
 )
+
 ROOT      = Path(__file__).resolve().parent  # pasta do script
 GEOM_DIR  = (ROOT.parent / "ground_mesh").resolve()
 RUNS_DIR  = (ROOT.parent / "runs_pyfs").resolve()
+
 LOGS_DIR  = (RUNS_DIR / "logs").resolve()
 SCRIPT_NAME = "script_out.txt"
 
@@ -24,13 +26,27 @@ GEOM_DIR.mkdir(parents=True, exist_ok=True)
 RUNS_DIR.mkdir(parents=True, exist_ok=True)
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
 
+def _resolve_fsm_path(p: Path) -> Path:
+    """Aceita um .fsm direto ou uma pasta contendo .fsm; pega o mais recente."""
+    p = p.resolve()
+    if p.is_file() and p.suffix.lower() == ".fsm":
+        return p
+    if p.is_dir():
+        candidates = sorted(p.glob("*.fsm"), key=lambda x: x.stat().st_mtime, reverse=True)
+        if candidates:
+            return candidates[0]
+        raise FileNotFoundError(f"Nenhum .fsm encontrado em {p}")
+    raise FileNotFoundError(f"Caminho FSM inválido: {p}")
+
+FSM_FILE_PATH =  _resolve_fsm_path((ROOT.parent / "geometria"))
+
 def case_name_from_path(p: Path) -> str:
     return p.stem
 
 def _reset_script():
     # limpa buffer e apaga o arquivo de macro anterior
     if hasattr(pyfs, "script") and hasattr(pyfs.script, "hard_reset"):
-        pyfs.script.hard_reset(filename=SCRIPT_NAME)
+        pyfs.script.hard_reset(filename=SCRIPT_NAME, header=False)
     else:
         # fallback para versões antigas
         pyfs.hard_reset(filename=SCRIPT_NAME)
