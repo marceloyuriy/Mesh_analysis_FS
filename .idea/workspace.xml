@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
+      <change afterPath="$PROJECT_DIR$/src/post_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/run_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,33 +47,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.corrigir_p3d.executor&quot;: &quot;Run&quot;,
-    &quot;Python.criar_plano.executor&quot;: &quot;Run&quot;,
-    &quot;Python.debug_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ground_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ground_sweep.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_refatorado.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_case.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/versao_04&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;junie.project.settings&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.corrigir_p3d.executor": "Run",
+    "Python.criar_plano.executor": "Run",
+    "Python.debug_api.executor": "Run",
+    "Python.ground_generator.executor": "Run",
+    "Python.ground_sweep.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_refatorado.executor": "Run",
+    "Python.post_processing.executor": "Run",
+    "Python.run_case.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/versao_04",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "junie.project.settings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\versao_04" />
@@ -115,7 +115,7 @@
       <workItem from="1759671701770" duration="4453000" />
       <workItem from="1759931748621" duration="95000" />
       <workItem from="1759931858706" duration="5106000" />
-      <workItem from="1759940311783" duration="1579000" />
+      <workItem from="1759940311783" duration="5475000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <option name="closed" value="true" />
@@ -213,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759678729323</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
+      <option name="closed" value="true" />
+      <created>1759941933118</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759941933118</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,12 +238,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$post_processing.coverage" NAME="post_processing Coverage Results" MODIFIED="1759946283814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759941150178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759941974688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1759933560395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ground_mesh" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_generator.coverage" NAME="ground_generator Coverage Results" MODIFIED="1759431827402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$debug_api.coverage" NAME="debug_api Coverage Results" MODIFIED="1759939193537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1759677701118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1759946395174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main_refatorado.coverage" NAME="main_refatorado Coverage Results" MODIFIED="1759416209575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_02" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$corrigir_p3d.coverage" NAME="corrigir_p3d Coverage Results" MODIFIED="1759432927425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
   </component>
