@@ -5,9 +5,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
-      <change afterPath="$PROJECT_DIR$/src/post_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Analise_malha_solo_FS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Analise_malha_solo_FS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/10_plano_solo_L22.50m_malha_9x4_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/11_plano_solo_L45.00m_malha_4x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/12_plano_solo_L45.00m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/13_plano_solo_L45.00m_malha_6x3_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/14_plano_solo_L45.00m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/15_plano_solo_L45.00m_malha_9x4_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/16_plano_solo_L56.25m_malha_4x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/17_plano_solo_L56.25m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/18_plano_solo_L56.25m_malha_6x3_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/19_plano_solo_L56.25m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/1_plano_solo_L11.25m_malha_4x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/20_plano_solo_L56.25m_malha_9x4_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/21_plano_solo_L112.50m_malha_4x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/22_plano_solo_L112.50m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/23_plano_solo_L112.50m_malha_6x3_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/24_plano_solo_L112.50m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/25_plano_solo_L112.50m_malha_9x4_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/2_plano_solo_L11.25m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/3_plano_solo_L11.25m_malha_6x3_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/4_plano_solo_L11.25m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/5_plano_solo_L11.25m_malha_9x4_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/6_plano_solo_L22.50m_malha_4x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/7_plano_solo_L22.50m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/8_plano_solo_L22.50m_malha_6x3_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/9_plano_solo_L22.50m_malha_5x2_h2.8125.p3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ground_mesh/ground_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/ground_sweep.py" beforeDir="false" afterPath="$PROJECT_DIR$/ground_mesh/ground_sweep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyFlightscript/examples/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyFlightscript/examples/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/10_plano_solo_L22.50m_malha_9x4_h2.8125/10_plano_solo_L22.50m_malha_9x4_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/10_plano_solo_L22.50m_malha_9x4_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/11_plano_solo_L45.00m_malha_4x2_h2.8125/11_plano_solo_L45.00m_malha_4x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/11_plano_solo_L45.00m_malha_4x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/12_plano_solo_L45.00m_malha_5x2_h2.8125/12_plano_solo_L45.00m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/12_plano_solo_L45.00m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/13_plano_solo_L45.00m_malha_6x3_h2.8125/13_plano_solo_L45.00m_malha_6x3_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/13_plano_solo_L45.00m_malha_6x3_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/14_plano_solo_L45.00m_malha_5x2_h2.8125/14_plano_solo_L45.00m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/14_plano_solo_L45.00m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/15_plano_solo_L45.00m_malha_9x4_h2.8125/15_plano_solo_L45.00m_malha_9x4_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/15_plano_solo_L45.00m_malha_9x4_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/16_plano_solo_L56.25m_malha_4x2_h2.8125/16_plano_solo_L56.25m_malha_4x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/16_plano_solo_L56.25m_malha_4x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/17_plano_solo_L56.25m_malha_5x2_h2.8125/17_plano_solo_L56.25m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/17_plano_solo_L56.25m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/18_plano_solo_L56.25m_malha_6x3_h2.8125/18_plano_solo_L56.25m_malha_6x3_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/18_plano_solo_L56.25m_malha_6x3_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/19_plano_solo_L56.25m_malha_5x2_h2.8125/19_plano_solo_L56.25m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/19_plano_solo_L56.25m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/1_plano_solo_L11.25m_malha_4x2_h2.8125/1_plano_solo_L11.25m_malha_4x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/1_plano_solo_L11.25m_malha_4x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/20_plano_solo_L56.25m_malha_9x4_h2.8125/20_plano_solo_L56.25m_malha_9x4_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/20_plano_solo_L56.25m_malha_9x4_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/21_plano_solo_L112.50m_malha_4x2_h2.8125/21_plano_solo_L112.50m_malha_4x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/21_plano_solo_L112.50m_malha_4x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/22_plano_solo_L112.50m_malha_5x2_h2.8125/22_plano_solo_L112.50m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/22_plano_solo_L112.50m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/23_plano_solo_L112.50m_malha_6x3_h2.8125/23_plano_solo_L112.50m_malha_6x3_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/23_plano_solo_L112.50m_malha_6x3_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/24_plano_solo_L112.50m_malha_5x2_h2.8125/24_plano_solo_L112.50m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/24_plano_solo_L112.50m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/25_plano_solo_L112.50m_malha_9x4_h2.8125/25_plano_solo_L112.50m_malha_9x4_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/25_plano_solo_L112.50m_malha_9x4_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/2_plano_solo_L11.25m_malha_5x2_h2.8125/2_plano_solo_L11.25m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/2_plano_solo_L11.25m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/3_plano_solo_L11.25m_malha_6x3_h2.8125/3_plano_solo_L11.25m_malha_6x3_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/3_plano_solo_L11.25m_malha_6x3_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/4_plano_solo_L11.25m_malha_5x2_h2.8125/4_plano_solo_L11.25m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/4_plano_solo_L11.25m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/5_plano_solo_L11.25m_malha_9x4_h2.8125/5_plano_solo_L11.25m_malha_9x4_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/5_plano_solo_L11.25m_malha_9x4_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/6_plano_solo_L22.50m_malha_4x2_h2.8125/6_plano_solo_L22.50m_malha_4x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/6_plano_solo_L22.50m_malha_4x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/7_plano_solo_L22.50m_malha_5x2_h2.8125/7_plano_solo_L22.50m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/7_plano_solo_L22.50m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/8_plano_solo_L22.50m_malha_6x3_h2.8125/8_plano_solo_L22.50m_malha_6x3_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/8_plano_solo_L22.50m_malha_6x3_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/9_plano_solo_L22.50m_malha_5x2_h2.8125/9_plano_solo_L22.50m_malha_5x2_h2.8125_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/9_plano_solo_L22.50m_malha_5x2_h2.8125/script_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/analise_convergencia_sem_boundary_v3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/10_plano_solo_L22.50m_malha_9x4_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/11_plano_solo_L45.00m_malha_4x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/12_plano_solo_L45.00m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/13_plano_solo_L45.00m_malha_6x3_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/14_plano_solo_L45.00m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/15_plano_solo_L45.00m_malha_9x4_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/16_plano_solo_L56.25m_malha_4x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/17_plano_solo_L56.25m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/18_plano_solo_L56.25m_malha_6x3_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/19_plano_solo_L56.25m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/1_plano_solo_L11.25m_malha_4x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/20_plano_solo_L56.25m_malha_9x4_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/21_plano_solo_L112.50m_malha_4x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/22_plano_solo_L112.50m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/23_plano_solo_L112.50m_malha_6x3_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/24_plano_solo_L112.50m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/25_plano_solo_L112.50m_malha_9x4_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/2_plano_solo_L11.25m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/3_plano_solo_L11.25m_malha_6x3_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/4_plano_solo_L11.25m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/5_plano_solo_L11.25m_malha_9x4_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/6_plano_solo_L22.50m_malha_4x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/7_plano_solo_L22.50m_malha_5x2_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/8_plano_solo_L22.50m_malha_6x3_h2.8125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs_pyfs/logs/9_plano_solo_L22.50m_malha_5x2_h2.8125.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/post_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/post_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/run_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +142,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/marceloyuriy/Mesh_analysis_FS.git&quot;,
-    &quot;accountId&quot;: &quot;1b79fc62-32b1-49e0-b554-295c0472089f&quot;
+    &quot;accountId&quot;: &quot;c0b0f125-a678-44df-8d6c-6f5d111a1228&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -47,36 +156,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.corrigir_p3d.executor": "Run",
-    "Python.criar_plano.executor": "Run",
-    "Python.debug_api.executor": "Run",
-    "Python.ground_generator.executor": "Run",
-    "Python.ground_sweep.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main_refatorado.executor": "Run",
-    "Python.post_processing.executor": "Run",
-    "Python.run_case.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/versao_04",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "junie.project.settings",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.corrigir_p3d.executor&quot;: &quot;Run&quot;,
+    &quot;Python.criar_plano.executor&quot;: &quot;Run&quot;,
+    &quot;Python.debug_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ground_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ground_sweep.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_refatorado.executor&quot;: &quot;Run&quot;,
+    &quot;Python.post_processing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_case.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setup.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Mesh_analysis_FS/.venv/Lib/site-packages&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\Mesh_analysis_FS\.venv\Lib\site-packages" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\versao_04" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_03" />
       <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
@@ -116,6 +228,16 @@
       <workItem from="1759931748621" duration="95000" />
       <workItem from="1759931858706" duration="5106000" />
       <workItem from="1759940311783" duration="5475000" />
+      <workItem from="1760105397392" duration="12000" />
+      <workItem from="1760105418759" duration="20000" />
+      <workItem from="1760105613049" duration="142000" />
+      <workItem from="1760105765454" duration="2463000" />
+      <workItem from="1760113949535" duration="1995000" />
+      <workItem from="1760119402542" duration="941000" />
+      <workItem from="1760120360294" duration="110000" />
+      <workItem from="1760120485438" duration="520000" />
+      <workItem from="1760121017292" duration="437000" />
+      <workItem from="1760121468100" duration="1718000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <option name="closed" value="true" />
@@ -238,14 +360,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$post_processing.coverage" NAME="post_processing Coverage Results" MODIFIED="1759946283814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$test.coverage" NAME="test Coverage Results" MODIFIED="1760121267462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyFlightscript/examples" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759941974688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1759933560395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ground_mesh" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_generator.coverage" NAME="ground_generator Coverage Results" MODIFIED="1759431827402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$debug_api.coverage" NAME="debug_api Coverage Results" MODIFIED="1759939193537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1759946395174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main_refatorado.coverage" NAME="main_refatorado Coverage Results" MODIFIED="1759416209575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_02" />
+    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1760121474554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$post_processing.coverage" NAME="post_processing Coverage Results" MODIFIED="1759946283814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$debug_api.coverage" NAME="debug_api Coverage Results" MODIFIED="1759939193537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$setup.coverage" NAME="setup Coverage Results" MODIFIED="1760121230224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyFlightscript" />
+    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1760121784192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ground_mesh" />
     <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$corrigir_p3d.coverage" NAME="corrigir_p3d Coverage Results" MODIFIED="1759432927425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
   </component>
 </project>

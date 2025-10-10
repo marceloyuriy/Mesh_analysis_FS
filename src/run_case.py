@@ -36,7 +36,7 @@ def run_case(p3d: Path):
             geometry_filepath=str(p3d.resolve()),
             units="METER",
             file_type="P3D",
-            clear=False  # MUITO IMPORTANTE!
+            clear=False,  # force explicitamente
         )
 
         # inicializar e rodar solver

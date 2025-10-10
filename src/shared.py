@@ -17,7 +17,7 @@ LOGS_DIR  = (RUNS_DIR / "logs").resolve()
 SCRIPT_NAME = "script_out.txt"
 
 # Deixe False no debug para VER a janela do FS e qualquer pop-up.
-HIDDEN = False
+HIDDEN = True
 
 FLOW = dict(velocity=15.0, density=1.225, viscosity=1.7894e-5, aoa=0.0, sideslip=0.0)
 SOLVER_ITERS = 500

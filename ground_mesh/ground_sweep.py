@@ -1,55 +1,55 @@
+# ground_sweep.py (versão aprimorada)
 from pathlib import Path
-from itertools import product
-from ground_generator import create_p3d_half_plane_ysymmetry
+# Importa a função original e a nossa nova função
+from ground_generator import generate_ground_p3d_by_count
 
-# ----------------- parâmetros do sweep -----------------
-c = 5.625
-altura = 2.8125
-larguras = [2 * c, 4 * c, 8 * c, 10 * c, 20 * c]
+# --- Parâmetros da Simulação ---
+# Use o diretório definido no seu script 'shared.py' para consistência
+# Assumindo que a pasta 'ground_mesh' está um nível acima da pasta dos scripts
+SCRIPT_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = (SCRIPT_DIR.parent / "ground_mesh").resolve()
+OUTPUT_DIR.mkdir(exist_ok=True)
 
-# --- CORREÇÃO: Ajustada a segunda definição de malha para não gerar duplicatas após o int() ---
-# A segunda fórmula foi alterada de [2*(4*c)/10, 4*c/10] para [2*(6*c)/12, (6*c)/12]
-# resultando em malhas únicas: (4, 2), (5, 2) e (6, 3)
-mesh_definitions = [
-    [2 * (2 * c) / 5, (2 * c) / 5],  # Resultará em NI=4, NJ=2
-    [2 * (6 * c) / 12, (6 * c) / 12],  # Resultará em NI=5, NJ=2 (AGORA É ÚNICO)
-    [2 * (8 * c) / 15, 8 * c / 15],
-    [2 * (10 * c) / 20, 10 * c / 20],
-    [2 * (20 * c) / 25, 20 * c / 25]# Resultará em NI=6, NJ=3
+# 1. Defina as características físicas do seu estudo
+c = 5.625  # Corda média aerodinâmica (m)
+altura = 2.8125  # Altura constante do solo (m)
+
+# 2. Defina as dimensões do plano de solo que você quer testar
+#    Estes são os comprimentos/larguras TOTAIS do plano.
+larguras_totais = [6 * c, 9 * c]  # Exemplo: 4, 8 e 16 cordas
+
+# 3. Defina as discretizações de malha que você quer testar (NI x NJ)
+#    Esta é a parte principal: uma lista de tuplas (NI, NJ)
+#    Uma boa prática é dobrar a densidade a cada passo.
+meshes_to_test = [
+    (60, 30),
+    (90, 45)
 ]
 
-# -------------------------------------------------------
+# --- Loop de Geração ---
 
-saida_dir = Path('C:/Users/marce/PycharmProjects/Analise_malha_solo_FS/ground_mesh')
-saida_dir.mkdir(parents=True, exist_ok=True)
-
-gerados = []
-
-print("Iniciando geração de 9 planos de solo únicos...")
+print(f"Iniciando a geração de malhas em: {OUTPUT_DIR}\n")
 count = 1
-for tamanho, mesh_dims in product(larguras, mesh_definitions):
-    NI = int(mesh_dims[0])
-    NJ = int(mesh_dims[1])
 
-    largura_y = tamanho
-    comprimento_x = tamanho * 2
-    z_coord = -altura
+for l_total in larguras_totais:
+    # Para este estudo, vamos manter o plano quadrado (Comprimento = Largura)
+    w_total = l_total
 
-    nome = f"{count}_plano_solo_L{largura_y:.2f}m_malha_{NI}x{NJ}_h{altura:.4f}.p3d"
-    caminho = saida_dir / nome
+    for ni, nj in meshes_to_test:
+        # --- Nomenclatura Correta e Automática do Arquivo ---
+        # O nome agora reflete os parâmetros de forma clara e legível
+        filename = f"{count}_plano_solo_L{l_total:.4f}m_malha_{ni}x{nj}_h{altura:.4f}.p3d"
+        output_path = OUTPUT_DIR / filename
 
-    print(f"Gerando: {nome}...")
+        # Chama a nossa NOVA função, passando a contagem de painéis
+        generate_ground_p3d_by_count(
+            L_total=l_total,
+            W_total=w_total,
+            h=altura,
+            NI=ni,
+            NJ=nj,
+            output_path=output_path
+        )
+        count += 1
 
-    create_p3d_half_plane_ysymmetry(
-        filename=caminho,
-        z_coord=z_coord,
-        width=largura_y,
-        length=comprimento_x,
-        num_points_width=NJ,
-        num_points_length=NI,
-    )
-    gerados.append(caminho)
-    count += 1
-print(f"\nOperação concluída. Arquivos gerados ({len(gerados)}):")
-for g in gerados:
-    print(" -", g)
+print(f"\n{count - 1} arquivos de malha PLOT3D gerados com sucesso em: {OUTPUT_DIR}")
