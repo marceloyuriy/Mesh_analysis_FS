@@ -12,19 +12,13 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 # 1. Defina as características físicas do seu estudo
 c = 5.625  # Corda média aerodinâmica (m)
-altura = 2.8125  # Altura constante do solo (m)
+altura = (2.8125 / 0.5) * 0.3  # Altura constante do solo (m) -> 1.6875 m
 
-# 2. Defina as dimensões do plano de solo que você quer testar
-#    Estes são os comprimentos/larguras TOTAIS do plano.
-larguras_totais = [6 * c, 9 * c]  # Exemplo: 4, 8 e 16 cordas
+# 2. Defina as dimensões TOTAIS do plano de solo a testar
+larguras_totais = [6 * c, 12 * c]  # Plano de 6 e 12 cordas
 
-# 3. Defina as discretizações de malha que você quer testar (NI x NJ)
-#    Esta é a parte principal: uma lista de tuplas (NI, NJ)
-#    Uma boa prática é dobrar a densidade a cada passo.
-meshes_to_test = [
-    (60, 30),
-    (90, 45)
-]
+# 3. Defina os tamanhos de elemento alvo a testar
+tamanhos_elemento = [c / 8, c / 16, c / 32]
 
 # --- Loop de Geração ---
 
@@ -35,7 +29,12 @@ for l_total in larguras_totais:
     # Para este estudo, vamos manter o plano quadrado (Comprimento = Largura)
     w_total = l_total
 
-    for ni, nj in meshes_to_test:
+    for elem_size in tamanhos_elemento:
+        # CALCULA NI e NJ AQUI, para a combinação atual de plano e elemento
+        # Isso garante que a malha é específica para o plano em questão
+        ni = int(l_total / elem_size)
+        nj = int(ni / 2)
+
         # --- Nomenclatura Correta e Automática do Arquivo ---
         # O nome agora reflete os parâmetros de forma clara e legível
         filename = f"{count}_plano_solo_L{l_total:.4f}m_malha_{ni}x{nj}_h{altura:.4f}.p3d"
