@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="\runs_pyfs\10_plano_solo_L146.2500m_malha_104x52_h1.6875\10_plano_solo_L146.2500m_malha_104x52_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\10_plano_solo_L45.0000m_malha_240x120_h1.6875\10_plano_solo_L45.0000m_malha_240x120_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\10_plano_solo_L67.5000m_malha_360x180_h1.6875\10_plano_solo_L67.5000m_malha_360x180_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\11_plano_solo_L146.2500m_malha_156x78_h1.6875\11_plano_solo_L146.2500m_malha_156x78_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\12_plano_solo_L146.2500m_malha_208x104_h1.6875\12_plano_solo_L146.2500m_malha_208x104_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\13_plano_solo_L146.2500m_malha_260x130_h1.6875\13_plano_solo_L146.2500m_malha_260x130_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\14_plano_solo_L146.2500m_malha_312x156_h1.6875\14_plano_solo_L146.2500m_malha_312x156_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\15_plano_solo_L146.2500m_malha_364x182_h1.6875\15_plano_solo_L146.2500m_malha_364x182_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\16_plano_solo_L146.2500m_malha_416x208_h1.6875\16_plano_solo_L146.2500m_malha_416x208_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\17_plano_solo_L168.7500m_malha_60x30_h1.6875\17_plano_solo_L168.7500m_malha_60x30_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\18_plano_solo_L168.7500m_malha_120x60_h1.6875\18_plano_solo_L168.7500m_malha_120x60_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\19_plano_solo_L168.7500m_malha_180x90_h1.6875\19_plano_solo_L168.7500m_malha_180x90_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L101.2500m_malha_36x18_h1.6875\1_plano_solo_L101.2500m_malha_36x18_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L112.5000m_malha_40x20_h1.6875\1_plano_solo_L112.5000m_malha_40x20_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L135.0000m_malha_48x24_h1.6875\1_plano_solo_L135.0000m_malha_48x24_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L16.8750m_malha_6x3_h1.6875\1_plano_solo_L16.8750m_malha_6x3_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L45.0000m_malha_16x8_h1.6875\1_plano_solo_L45.0000m_malha_16x8_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L67.5000m_malha_192x96_h1.6875\1_plano_solo_L67.5000m_malha_192x96_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\1_plano_solo_L67.5000m_malha_24x12_h1.6875\1_plano_solo_L67.5000m_malha_24x12_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\20_plano_solo_L168.7500m_malha_240x120_h1.6875\20_plano_solo_L168.7500m_malha_240x120_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\21_plano_solo_L168.7500m_malha_300x150_h1.6875\21_plano_solo_L168.7500m_malha_300x150_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\22_plano_solo_L168.7500m_malha_360x180_h1.6875\22_plano_solo_L168.7500m_malha_360x180_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\23_plano_solo_L168.7500m_malha_420x210_h1.6875\23_plano_solo_L168.7500m_malha_420x210_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\24_plano_solo_L168.7500m_malha_480x240_h1.6875\24_plano_solo_L168.7500m_malha_480x240_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L101.2500m_malha_72x36_h1.6875\2_plano_solo_L101.2500m_malha_72x36_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L112.5000m_malha_80x40_h1.6875\2_plano_solo_L112.5000m_malha_80x40_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L135.0000m_malha_96x48_h1.6875\2_plano_solo_L135.0000m_malha_96x48_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L16.8750m_malha_12x6_h1.6875\2_plano_solo_L16.8750m_malha_12x6_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L45.0000m_malha_32x16_h1.6875\2_plano_solo_L45.0000m_malha_32x16_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L67.5000m_malha_384x192_h1.6875\2_plano_solo_L67.5000m_malha_384x192_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\2_plano_solo_L67.5000m_malha_48x24_h1.6875\2_plano_solo_L67.5000m_malha_48x24_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\3_plano_solo_L101.2500m_malha_108x54_h1.6875\3_plano_solo_L101.2500m_malha_108x54_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\3_plano_solo_L112.5000m_malha_120x60_h1.6875\3_plano_solo_L112.5000m_malha_120x60_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\3_plano_solo_L135.0000m_malha_144x72_h1.6875\3_plano_solo_L135.0000m_malha_144x72_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\3_plano_solo_L16.8750m_malha_18x9_h1.6875\3_plano_solo_L16.8750m_malha_18x9_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\3_plano_solo_L45.0000m_malha_48x24_h1.6875\3_plano_solo_L45.0000m_malha_48x24_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\3_plano_solo_L67.5000m_malha_72x36_h1.6875\3_plano_solo_L67.5000m_malha_72x36_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\4_plano_solo_L101.2500m_malha_144x72_h1.6875\4_plano_solo_L101.2500m_malha_144x72_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\4_plano_solo_L112.5000m_malha_160x80_h1.6875\4_plano_solo_L112.5000m_malha_160x80_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\4_plano_solo_L135.0000m_malha_192x96_h1.6875\4_plano_solo_L135.0000m_malha_192x96_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\4_plano_solo_L16.8750m_malha_24x12_h1.6875\4_plano_solo_L16.8750m_malha_24x12_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\4_plano_solo_L45.0000m_malha_64x32_h1.6875\4_plano_solo_L45.0000m_malha_64x32_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\4_plano_solo_L67.5000m_malha_96x48_h1.6875\4_plano_solo_L67.5000m_malha_96x48_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L101.2500m_malha_180x90_h1.6875\5_plano_solo_L101.2500m_malha_180x90_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L112.5000m_malha_200x100_h1.6875\5_plano_solo_L112.5000m_malha_200x100_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L135.0000m_malha_240x120_h1.6875\5_plano_solo_L135.0000m_malha_240x120_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L16.8750m_malha_30x15_h1.6875\5_plano_solo_L16.8750m_malha_30x15_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L45.0000m_malha_80x40_h1.6875\5_plano_solo_L45.0000m_malha_80x40_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L67.5000m_malha_120x60_h1.6875\5_plano_solo_L67.5000m_malha_120x60_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L90.0000m_malha_256x128_h1.6875\5_plano_solo_L90.0000m_malha_256x128_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\5_plano_solo_L90.0000m_malha_32x16_h1.6875\5_plano_solo_L90.0000m_malha_32x16_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L101.2500m_malha_216x108_h1.6875\6_plano_solo_L101.2500m_malha_216x108_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L112.5000m_malha_240x120_h1.6875\6_plano_solo_L112.5000m_malha_240x120_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L135.0000m_malha_288x144_h1.6875\6_plano_solo_L135.0000m_malha_288x144_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L16.8750m_malha_36x18_h1.6875\6_plano_solo_L16.8750m_malha_36x18_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L45.0000m_malha_96x48_h1.6875\6_plano_solo_L45.0000m_malha_96x48_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L67.5000m_malha_144x72_h1.6875\6_plano_solo_L67.5000m_malha_144x72_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L90.0000m_malha_512x256_h1.6875\6_plano_solo_L90.0000m_malha_512x256_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\6_plano_solo_L90.0000m_malha_64x32_h1.6875\6_plano_solo_L90.0000m_malha_64x32_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L101.2500m_malha_252x126_h1.6875\7_plano_solo_L101.2500m_malha_252x126_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L112.5000m_malha_280x140_h1.6875\7_plano_solo_L112.5000m_malha_280x140_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L135.0000m_malha_336x168_h1.6875\7_plano_solo_L135.0000m_malha_336x168_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L16.8750m_malha_42x21_h1.6875\7_plano_solo_L16.8750m_malha_42x21_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L45.0000m_malha_112x56_h1.6875\7_plano_solo_L45.0000m_malha_112x56_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L67.5000m_malha_168x84_h1.6875\7_plano_solo_L67.5000m_malha_168x84_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\7_plano_solo_L90.0000m_malha_96x48_h1.6875\7_plano_solo_L90.0000m_malha_96x48_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L101.2500m_malha_288x144_h1.6875\8_plano_solo_L101.2500m_malha_288x144_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L112.5000m_malha_320x160_h1.6875\8_plano_solo_L112.5000m_malha_320x160_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L135.0000m_malha_384x192_h1.6875\8_plano_solo_L135.0000m_malha_384x192_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L16.8750m_malha_48x24_h1.6875\8_plano_solo_L16.8750m_malha_48x24_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L45.0000m_malha_128x64_h1.6875\8_plano_solo_L45.0000m_malha_128x64_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L67.5000m_malha_192x96_h1.6875\8_plano_solo_L67.5000m_malha_192x96_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\8_plano_solo_L90.0000m_malha_128x64_h1.6875\8_plano_solo_L90.0000m_malha_128x64_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\9_plano_solo_L146.2500m_malha_52x26_h1.6875\9_plano_solo_L146.2500m_malha_52x26_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\9_plano_solo_L45.0000m_malha_160x80_h1.6875\9_plano_solo_L45.0000m_malha_160x80_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\runs_pyfs\9_plano_solo_L67.5000m_malha_240x120_h1.6875\9_plano_solo_L67.5000m_malha_240x120_h1.6875_solver.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

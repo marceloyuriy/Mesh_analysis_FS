@@ -12,7 +12,7 @@ try:
 except ImportError:
     print("Aviso: Não foi possível importar 'RUNS_DIR' de 'shared.py'.")
     print("Definindo um caminho padrão. Ajuste se necessário.")
-    RUNS_DIR = Path("./runs_pyfs").resolve()  # Fallback
+    RUNS_DIR = Path("./runs_pyfs/csv").resolve()  # Fallback
 
 
 def _parse_mesh(mesh_str: str) -> tuple[int, int]:

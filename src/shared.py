@@ -6,7 +6,7 @@ import pyFlightscript as pyfs
 # --- CONFIG ---
 FS_EXE = os.environ.get(
     "FS_EXE",
-    r"C:\Altair\2025.1\flightstream\FlightStream_25.1_Windows_x86_64.exe"
+    r"C:\marcelo\flightstream\FlightStream_25.1_Windows_x86_64.exe"
 )
 
 ROOT      = Path(__file__).resolve().parent  # pasta do script

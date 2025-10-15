@@ -4,92 +4,134 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="Versão funcionando. Iniciando a analise de otimização de malha">
+    <list default="true" id="8b92416b-c9ce-449c-ade9-500fa9198255" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/1_plano_solo_L16.8750m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/2_plano_solo_L22.5000m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/3_plano_solo_L33.7500m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/4_plano_solo_L45.0000m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/5_plano_solo_L56.2500m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/6_plano_solo_L67.5000m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/7_plano_solo_L90.0000m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs_pyfs/csv_variando_tamanho_malha_cte/8_plano_solo_L101.2500m_malha_180x90_h1.6875_solver.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Analise_malha_solo_FS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Analise_malha_solo_FS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometria/AR021D_OGE.fsm" beforeDir="false" afterPath="$PROJECT_DIR$/geometria/AR021D_OGE.fsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ground_mesh/ground_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ground_mesh/ground_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ground_mesh/ground_sweep.py" beforeDir="false" afterPath="$PROJECT_DIR$/ground_mesh/ground_sweep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/post_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/post_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="SYNC" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;marceloyuriy&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/marceloyuriy/Mesh_analysis_FS.git&quot;,
-    &quot;accountId&quot;: &quot;c0b0f125-a678-44df-8d6c-6f5d111a1228&quot;
-  }
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="33T4Y0pdGDkdmpIzLcIYaSvGm46" />
+  <component name="ProjectId" id="33ndxFRxpXaFEsPDyTFGUVTAzct" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.corrigir_p3d.executor&quot;: &quot;Run&quot;,
-    &quot;Python.criar_plano.executor&quot;: &quot;Run&quot;,
-    &quot;Python.debug_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ground_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ground_sweep.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_refatorado.executor&quot;: &quot;Run&quot;,
-    &quot;Python.post_processing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_case.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setup.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Mesh_analysis_FS/.venv/Lib/site-packages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.ground_sweep.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.plot_fs_coeffs_sem_boundary.executor": "Run",
+    "Python.post_processing.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/marce/PycharmProjects/fs_ground_analysis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projects\Mesh_analysis_FS\.venv\Lib\site-packages" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\versao_04" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_03" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_01_work" />
-      <recent name="C:\Users\marce\PycharmProjects\Analise_malha_solo_FS\version_02" />
+      <recent name="C:\Users\marce\PycharmProjects\fs_ground_analysis\runs_pyfs\csv_variando_tamanho_malha_cte" />
+      <recent name="C:\marcelo\fs_ground_analysis\ground_mesh\planos_gerados" />
+      <recent name="C:\marcelo\fs_ground_analysis\runs_pyfs\csv" />
+      <recent name="C:\marcelo\fs_ground_analysis" />
+      <recent name="C:\marcelo\fs_ground_analysis\ground_mesh" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ground_sweep" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fs_ground_analysis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ground_mesh" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\marcelo\fs_ground_analysis\ground_mesh\ground_sweep.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fs_ground_analysis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.ground_sweep" />
+      <item itemvalue="Python.main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.ground_sweep" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -101,179 +143,35 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="344b4022-3115-45a1-b50b-7caae8947429" name="Changes" comment="" />
-      <created>1759327771751</created>
+      <changelist id="8b92416b-c9ce-449c-ade9-500fa9198255" name="Changes" comment="" />
+      <created>1759957014648</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1759327771751</updated>
-      <workItem from="1759327772797" duration="51000" />
-      <workItem from="1759328435351" duration="177000" />
-      <workItem from="1759340869289" duration="12756000" />
-      <workItem from="1759408816158" duration="25256000" />
-      <workItem from="1759496666196" duration="177000" />
-      <workItem from="1759497660972" duration="476000" />
-      <workItem from="1759617640557" duration="146000" />
-      <workItem from="1759617880633" duration="139000" />
-      <workItem from="1759618292711" duration="24000" />
-      <workItem from="1759671701770" duration="4453000" />
-      <workItem from="1759931748621" duration="95000" />
-      <workItem from="1759931858706" duration="5106000" />
-      <workItem from="1759940311783" duration="5475000" />
-      <workItem from="1760105397392" duration="12000" />
-      <workItem from="1760105418759" duration="20000" />
-      <workItem from="1760105613049" duration="142000" />
-      <workItem from="1760105765454" duration="2463000" />
-      <workItem from="1760113949535" duration="1995000" />
-      <workItem from="1760119402542" duration="941000" />
-      <workItem from="1760120360294" duration="110000" />
-      <workItem from="1760120485438" duration="520000" />
-      <workItem from="1760121017292" duration="437000" />
-      <workItem from="1760121468100" duration="2126000" />
-      <workItem from="1760128604521" duration="943000" />
+      <updated>1759957014648</updated>
+      <workItem from="1759957024641" duration="1405000" />
+      <workItem from="1759958458530" duration="10000" />
+      <workItem from="1759958476846" duration="264000" />
+      <workItem from="1759959072505" duration="80000" />
+      <workItem from="1760130761431" duration="547000" />
+      <workItem from="1760131315216" duration="292000" />
+      <workItem from="1760131622898" duration="374000" />
+      <workItem from="1760132013043" duration="173000" />
+      <workItem from="1760132198136" duration="59000" />
+      <workItem from="1760132273937" duration="71000" />
+      <workItem from="1760132352666" duration="23348000" />
+      <workItem from="1760470044887" duration="1001000" />
+      <workItem from="1760534659253" duration="793000" />
     </task>
-    <task id="LOCAL-00001" summary="First files">
-      <option name="closed" value="true" />
-      <created>1759343448962</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1759343448962</updated>
-    </task>
-    <task id="LOCAL-00002" summary="First files">
-      <option name="closed" value="true" />
-      <created>1759343507144</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1759343507144</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD.">
-      <option name="closed" value="true" />
-      <created>1759348723489</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1759348723489</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD.">
-      <option name="closed" value="true" />
-      <created>1759348748010</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1759348748010</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Correção script de construção do plano">
-      <option name="closed" value="true" />
-      <created>1759348825618</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1759348825618</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Refatoração da versão 1. Adição da versão 02">
-      <option name="closed" value="true" />
-      <created>1759351018198</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1759351018198</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários">
-      <option name="closed" value="true" />
-      <created>1759425647019</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1759425647019</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários">
-      <option name="closed" value="true" />
-      <created>1759425659643</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1759425659643</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Correção dos caminhos para os arquivos">
-      <option name="closed" value="true" />
-      <created>1759428513281</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1759428513281</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
-      <option name="closed" value="true" />
-      <created>1759437161241</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1759437161241</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
-      <option name="closed" value="true" />
-      <created>1759496736062</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1759496736062</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
-      <option name="closed" value="true" />
-      <created>1759678729323</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1759678729323</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos">
-      <option name="closed" value="true" />
-      <created>1759941933118</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1759941933118</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Versão funcionando. Iniciando a analise de otimização de malha">
-      <option name="closed" value="true" />
-      <created>1760124283544</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1760124283544</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="First files" />
-    <MESSAGE value="Primeira versão funcionando. Ainda tem texto de saída num formato fora do padrão e não foi verificado os valores com o CFD." />
-    <MESSAGE value="Correção script de construção do plano" />
-    <MESSAGE value="Refatoração da versão 1. Adição da versão 02" />
-    <MESSAGE value="Solução de alguns erros na montagem do txt e de referência. ainda não funcionando da forma como deveria. Esta com dificuldade de ler os arquivos necessários" />
-    <MESSAGE value="Correção dos caminhos para os arquivos" />
-    <MESSAGE value="Criação dos diferentes arquivos .p3d e tentativa de realizar a análise usando esse arquivos" />
-    <MESSAGE value="Versão funcionando. Iniciando a analise de otimização de malha" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versão funcionando. Iniciando a analise de otimização de malha" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$test.coverage" NAME="test Coverage Results" MODIFIED="1760121267462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyFlightscript/examples" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$criar_plano.coverage" NAME="criar_plano Coverage Results" MODIFIED="1759341791432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1759941974688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1759933560395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ground_mesh" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$ground_generator.coverage" NAME="ground_generator Coverage Results" MODIFIED="1759431827402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
-    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$post_processing.coverage" NAME="post_processing Coverage Results" MODIFIED="1760129125004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1759946395174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$main_refatorado.coverage" NAME="main_refatorado Coverage Results" MODIFIED="1759416209575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_02" />
-    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$main.coverage" NAME="main Coverage Results" MODIFIED="1760129217710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$post_processing.coverage" NAME="post_processing Coverage Results" MODIFIED="1759946283814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$debug_api.coverage" NAME="debug_api Coverage Results" MODIFIED="1759939193537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$setup.coverage" NAME="setup Coverage Results" MODIFIED="1760121230224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyFlightscript" />
-    <SUITE FILE_PATH="coverage/Mesh_analysis_FS$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1760129207326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ground_mesh" />
-    <SUITE FILE_PATH="coverage/Analise_malha_solo_FS$corrigir_p3d.coverage" NAME="corrigir_p3d Coverage Results" MODIFIED="1759432927425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_03" />
+    <SUITE FILE_PATH="coverage/fs_ground_analysis$ground_sweep.coverage" NAME="ground_sweep Coverage Results" MODIFIED="1760447923879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ground_mesh" />
+    <SUITE FILE_PATH="coverage/fs_ground_analysis$post_processing.coverage" NAME="post_processing Coverage Results" MODIFIED="1760445983397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/fs_ground_analysis$main__1_.coverage" NAME="main Coverage Results" MODIFIED="1760198434914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/fs_ground_analysis$plot_fs_coeffs_sem_boundary.coverage" NAME="plot_fs_coeffs_sem_boundary Coverage Results" MODIFIED="1760535040475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runs_pyfs/post_process" />
+    <SUITE FILE_PATH="coverage/fs_ground_analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1760447929187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

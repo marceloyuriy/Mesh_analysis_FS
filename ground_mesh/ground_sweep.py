@@ -15,10 +15,10 @@ c = 5.625  # Corda média aerodinâmica (m)
 altura = (2.8125 / 0.5) * 0.3  # Altura constante do solo (m) -> 1.6875 m
 
 # 2. Defina as dimensões TOTAIS do plano de solo a testar
-larguras_totais = [6 * c, 12 * c]  # Plano de 6 e 12 cordas
+larguras_totais = [3 * c, 4*c,  6 * c, 8 * c, 10*c, 12 * c, 16*c, 18 * c, 20*c, 22 * c, 24 * c, 26 * c, 28*c,  30 *c]  # Plano de 6 e 12 cordas
 
 # 3. Defina os tamanhos de elemento alvo a testar
-tamanhos_elemento = [c / 8, c / 16, c / 32]
+#tamanhos_elemento = [c / 2, c / 4, c / 6, c / 8,c / 10, c / 12, c / 14, c / 16]
 
 # --- Loop de Geração ---
 
@@ -29,26 +29,27 @@ for l_total in larguras_totais:
     # Para este estudo, vamos manter o plano quadrado (Comprimento = Largura)
     w_total = l_total
 
-    for elem_size in tamanhos_elemento:
-        # CALCULA NI e NJ AQUI, para a combinação atual de plano e elemento
-        # Isso garante que a malha é específica para o plano em questão
-        ni = int(l_total / elem_size)
-        nj = int(ni / 2)
+    #for elem_size in tamanhos_elemento:
+    # CALCULA NI e NJ AQUI, para a combinação atual de plano e elemento
+    # Isso garante que a malha é específica para o plano em questão
+    #ni = int(l_total / elem_size)
+    #nj = int(ni / 2)
+    ni = 180
+    nj = 90
+    # --- Nomenclatura Correta e Automática do Arquivo ---
+    # O nome agora reflete os parâmetros de forma clara e legível
+    filename = f"{count}_plano_solo_L{l_total:.4f}m_malha_{ni}x{nj}_h{altura:.4f}.p3d"
+    output_path = OUTPUT_DIR / filename
 
-        # --- Nomenclatura Correta e Automática do Arquivo ---
-        # O nome agora reflete os parâmetros de forma clara e legível
-        filename = f"{count}_plano_solo_L{l_total:.4f}m_malha_{ni}x{nj}_h{altura:.4f}.p3d"
-        output_path = OUTPUT_DIR / filename
-
-        # Chama a nossa NOVA função, passando a contagem de painéis
-        generate_ground_p3d_by_count(
-            L_total=l_total,
-            W_total=w_total,
-            h=altura,
-            NI=ni,
-            NJ=nj,
-            output_path=output_path
-        )
-        count += 1
+    # Chama a nossa NOVA função, passando a contagem de painéis
+    generate_ground_p3d_by_count(
+        L_total=l_total,
+        W_total=w_total,
+        h=altura,
+        NI=ni,
+        NJ=nj,
+        output_path=output_path
+    )
+    count += 1
 
 print(f"\n{count - 1} arquivos de malha PLOT3D gerados com sucesso em: {OUTPUT_DIR}")

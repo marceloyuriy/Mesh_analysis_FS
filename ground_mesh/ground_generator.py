@@ -59,7 +59,7 @@ def create_p3d_plane_centered(
     Saída: PLOT3D ASCII (1 bloco).
     """
     x = np.linspace(-L_total/2.0, +L_total/2.0, NI)
-    y = np.linspace(-W_total/2.0, +W_total/2.0, NJ)
+    y = np.linspace(0, +W_total/2.0, NJ)
     xx, yy = np.meshgrid(x, y, indexing="ij")
     zz = np.full_like(xx, fill_value=z_coord, dtype=float)
     _write_plot3d_single_block(filename, xx, yy, zz)
@@ -80,7 +80,7 @@ def generate_ground_p3d_by_count(
         filename=output_path,
         z_coord=-abs(h),    # solo “abaixo” da origem
         L_total=L_total,
-        W_total=W_total,
+        W_total=W_total/2,
         NI=NI,
         NJ=NJ,
     )
